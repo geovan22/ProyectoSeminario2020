@@ -4,7 +4,8 @@
         public function Inicio()
         {
             $smarty = new Smarty();
-            $smarty->display('p.tpl');
+            $smarty->assign('title','Colegio');
+            $smarty->display('Default.tpl');
         }
     }
     
