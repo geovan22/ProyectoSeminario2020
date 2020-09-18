@@ -1,19 +1,22 @@
 <?php
     class Home
     {
+        public $smarty;
+        
+        public function __construct()
+        {
+            $this->smarty = new Smarty();
+            $this->caching = true;
+            $this->compile_check = true;
+        }
+        
         public function Inicio()
         {
-            $smarty = new Smarty();
-            $smarty->assign('title','Colegio');
-            $smarty->display('Default.tpl');
+            $this->smarty->assign('title','Colegio');
+            $this->smarty->display('Default.tpl');
         }
-
-        public function funcion()
-        {
-            $smarty = new Smarty();
-            //$smarty->assign('title','Colegio');
-            $smarty->display('p.tpl');
-        }
+        
+        
     }
     
 ?>

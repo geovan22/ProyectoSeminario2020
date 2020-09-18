@@ -22,6 +22,7 @@ class Raw {
 
 class Medoo
 {
+    
 	public $pdo;
 
 	protected $type;
@@ -44,6 +45,7 @@ class Medoo
 
 	public function __construct(array $options)
 	{
+	   
 		if (isset($options[ 'database_type' ]))
 		{
 			$this->type = strtolower($options[ 'database_type' ]);
