@@ -3,8 +3,8 @@
 <!-- column -->
 <center>
 <div class="col-lg-6 bg-gradient-primary" >
-  <div class="card">
-      <img src="Resource/assets/images/LOGO.png">
+  <div >
+      <img src="Resource/assets/images/LOGO.png" width="950" height="650">
      
         </div>
       </div>

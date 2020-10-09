@@ -7,7 +7,14 @@
        {
             $conexion = new Medoo([
             	// required
+                /*
             	'database_type' => 'mysql',
+            	'database_name' => 'ottos_26323356_seminario',
+            	'server' => 'localhost',
+            	'username' => 'root',
+            	'password' => '',
+                */
+                'database_type' => 'mysql',
             	'database_name' => 'ottos_26323356_seminario',
             	'server' => 'sql212.tonohost.com',
             	'username' => 'ottos_26323356',

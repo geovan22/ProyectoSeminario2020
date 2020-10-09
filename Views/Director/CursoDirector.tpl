@@ -22,60 +22,31 @@
                 Datos del Curso
               </h4>
               <hr/>
+              <center>
               <div class="form-row py-5">
-                <div class="form-group col-md-6 py-3 ">
+                <div class="form-group col-md-6 py-3">
                   <label for="validationCustom01">
                     Ingrese el Nombre del Curso
                   </label>
                   <input type="text" name="curso" class="form-control " id="Nombre_1" required>
                 </div>
+              </center>
                 
-                
-                
-               
-                
-                <!--
+              
+              <div class="form-row">
+              
                 <div class="form-group col-md-6 py-3">
-                  <label for="pwd">
-                    Contraseña
-                  </label>
-                  <input type="password" class="form-control" id="pwd">
-                </div>
-                -->
-
-           
-              
-              <!--
-              <div class="form-group col-md-6 py-3">
-                <label for="exampleFormControlSelect1">
-                  Puesto:
-                </label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>
-                    1
-                  </option>
-                  <option>
-                    2
-                  </option>
-                  <option>
-                    3
-                  </option>
-                </select>
-              </div>
-              -->
-              
-              <div class="form-row py-5">
-                <div class="form-group col-md-6 ">
                   <label for="exampleFormControlSelect1">
                     Seleccione Carrera:
                   </label>
-                  <select class="form-control" name="nivel" id="exampleFormControlSelect1">
-                    {foreach from=$nivel item=$n }
-                        <option value="{$n}">{$n}</option>
+                  <select class="form-control" name="carrera" id="exampleFormControlSelect1">
+                    {foreach from=$carrera item=$c }
+                        <option value="{$c}">{$c}</option>
                     {/foreach}
                   </select>
                 </div>
-                <div class="form-group col-md-6 ">
+               
+                <div class="form-group col-md-6 py-3">
                   <label for="exampleFormControlSelect1">
                     Seleccione Grado:
                   </label>
@@ -85,30 +56,52 @@
                     {/foreach}
                   </select>
                 </div>
-                <div class="form-group col-md-6 ">
+               
+                <div class="form-group col-md-6 py-3 ">
                   <label for="exampleFormControlSelect1">
                     Seleccione Nivel:
                   </label>
-                  <select class="form-control" name="carrera" id="exampleFormControlSelect1">
-                    {foreach from=$carrera item=$c }
+                  <select class="form-control" name="nivel" id="exampleFormControlSelect1">
+                    {foreach from=$nivel item=$n }
+                        <option value="{$n}">{$n}</option>
+                    {/foreach}
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6 py-3 ">
+                  <label for="exampleFormControlSelect1">
+                    Ciclo:
+                  </label>
+                  <select class="form-control" name="ciclo" id="exampleFormControlSelect1">
+                    {foreach from=$ciclo item=$c }
                         <option value="{$c}">{$c}</option>
                     {/foreach}
                   </select>
                 </div>
-                    
+
+                 <div class="form-group col-md-6 py-3 ">
+                  <label for="exampleFormControlSelect1">
+                    Sección:
+                  </label>
+                  <select class="form-control" name="seccion" id="exampleFormControlSelect1">
+                    {foreach from=$seccion item=$s }
+                        <option value="{$s}">{$s}</option>
+                    {/foreach}
+                  </select>
+                </div>
+
               </div>
               
           </div>
           <input type="submit" value="CREAR CURSO" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"/>
           <hr />
     </form>
-    
-    
     </div>
+  </div>
+  </div>
+</div>
   </section>
-</center>
-</div>
-</div>
+  </center>
 <script>
   $('.fixed-plugin a').click(function(event) {
     // si hacemos clic en cambiar, detenemos la propagación del evento, por lo que el 

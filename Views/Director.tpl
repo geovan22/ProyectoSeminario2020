@@ -1,12 +1,11 @@
 
   <body class="">
-  
- 
- {include file="Navs/NavLateral.tpl"}  
+                                                           
+ {include file="Navs/NavLateral.tpl"}    
   {include file="Navs/NavCabecera.tpl"}  
    
   {if $vista=="Default"}
-    {include file="Director/DefaultDirector.tpl"}
+    {include file="Director/Default.tpl"}
   {else if $vista=="Empleado"}
     {include file="Director/EmpleadoDirector.tpl"}
   {else if $vista=="Maestro"}
@@ -33,6 +32,8 @@
     {include file="Director/AsignarMaestro.tpl"}
   {else if $vista=="AsignacionSalon"}
     {include file="Director/alumno_salon.tpl"}
+  {else if $vista=="ConsultaNivel"}
+    {include file="Director/ConsultaNivel.tpl"}
  
   {else}
     <h1>VISTA NO DISPONIBLE</h1> 
@@ -63,7 +64,7 @@
 
         var new_color = $(this).data('color');
 
-        if ($sidebar.length != 0) {
+        if ($sidebar.length != 0){
           $sidebar.attr('data-color', new_color);
         }
 

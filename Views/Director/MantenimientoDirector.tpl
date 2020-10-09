@@ -1,10 +1,32 @@
-<!-- TABLA -->
-<div class="py-5">
+<div id="content ">
+  <section class="py-3 ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          
+        </div>    
+      </div>
+    </div>
 
-    <center class="py-5">
-        <h2 class="card-title">Nuestros registros:</h2>
-        
-    </center>  
+
+
+<center>
+    <section class="container py-5 " >
+  
+      <div class="col-md-10" >
+        <div class="card">
+            <div class="card-body" >
+              <div class="card-header card-header-info">
+                <center>
+                  <h2 class="card-title">Consulta de Alumno/Maestro</h2>
+                </center>  
+              </div>
+
+
+
+<!-- TABLA -->
+
+    
     
     <center>
         <form method="post" action="?controller=Director&action=BuscarUsuarios" class="needs-validation " novalidate>
@@ -24,7 +46,7 @@
             </div>
                   
             <div class="form-row py-6">
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect1">
                     Nivel:
                   </label>
@@ -45,7 +67,7 @@
                     {/foreach}
                   </select>
                 </div>
-                <div class="form-group col-md-2 ">
+                <div class="form-group col-md-3 ">
                   <label for="exampleFormControlSelect1">
                     Carrera:
                   </label>
@@ -55,7 +77,7 @@
                     {/foreach}
                   </select>
                 </div>
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                   <label for="exampleFormControlSelect1">
                     Ciclo:
                   </label>
@@ -65,10 +87,24 @@
                     {/foreach}
                   </select>
                 </div>
+            
+      
+
               </div>
-                  
+              <div class="form-group col-md-3 py-3">
+                <label for="exampleFormControlSelect1">
+                  Sección:
+                </label>
+                <select class="form-control" name="seccion" id="exampleFormControlSelect1">
+                  {foreach from=$seccion item=$s }
+                        <option value="{$s}">{$s}</option>
+                    {/foreach}
+                </select>
+            </div>
+            <div class=" py-5">  
                 <input type="submit" value="BUSCAR" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"/>
-        </form>
+              </div>
+              </form>
     </center>
     
 {if isset($usuarios)}
@@ -76,18 +112,18 @@
 <div class="py-5 container">
     <div class="row">
         <div class="col">
-            <table class="table table-striped table-bordered table-hover">
+            <table class="table table-striped table-bordered table-hover table-active">
                 <thead>
                     <tr>
-                        <th>CUI</th>
-                        <th>Primer Nombre</th>
-                        <th>Primer Apellido</th>
+                        <th><font color="Navy" face="Comic Sans MS,arial"><center>CUI</center></font></th>
+                        <th><font color="Navy" face="Comic Sans MS,arial"><center>Primer Nombre</center></font></th>
+                        <th><font color="Navy" face="Comic Sans MS,arial"><center>Primer Apellido</center></font></th>
                         {if $tipo=='Alumno'}
-                            <th>Nivel</th>
-                            <th>Grado</th>
-                            <th>Carrera</th>
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Nivel</center></font></th>
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Grado</center></font></th>
+                            <th><font color="Navy" face="Comic Sans MS,arial"><center>Carrera</center></font></th>
                         {/if}
-                        <th width="9%">Acciones</th>
+                        <th width="9%"><font color="Navy" face="Comic Sans MS,arial"><center>Acciones</center></font></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -122,5 +158,10 @@
     </div>
 </div>
 </div>
+</div>  
+</div>
+    </div>
+  </section>
+</center>
 {/if}
 <!-- /TABLA -->

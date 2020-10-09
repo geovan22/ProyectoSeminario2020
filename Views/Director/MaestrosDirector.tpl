@@ -189,9 +189,12 @@
             </div>
           </div>
           </form>
-            
-            
-          </div>  
+          </div> 
+          {if isset($prof)}
+            <div class="alert alert-primary" style="max-width: 20rem;"  role="alert">
+            El carnet del estudiante es: <strong>{$prof}</strong>
+            </div>
+          {/if} 
           </div>
       </div>
     </div>

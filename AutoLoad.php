@@ -2,6 +2,7 @@
 
 	function Autoload($class)
     {
+     
         if(is_file('Controller/'.$class.'.Controller.php'))
             require_once('Controller/'.$class.'.Controller.php');
             

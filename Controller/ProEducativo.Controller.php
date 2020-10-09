@@ -3,9 +3,9 @@
     {
         public $educativo;
         public $smarty;
-
+                                                   
         
-        public function __construct()
+        public function __construct()              
         {
             $this->educativo=new Educativo();
             $this->smarty=new Smarty();
@@ -18,6 +18,8 @@
             $nivel=$_POST['nivel'];
             $grado=$_POST['grado'];
             $carrera=$_POST['carrera'];
+            $ciclo=$_POST['ciclo'];
+            $seccion=$_POST['seccion'];
             
             if($nivel!="")
             {
@@ -27,13 +29,19 @@
             {
                 $this->educativo->CrearGrado($grado);
             }
-            if($carrera!="")
+            if($carrera!="" && $seccion!="")
             {
                $this->educativo->CrearCarrera($carrera);
             }
-            
-            
-            
+            if($ciclo!="")
+            {
+               $this->educativo->CrearCiclo($ciclo);
+            }
+            if($seccion!="")
+            {
+               $this->educativo->CrearSeccion($seccion);
+            }
+  
             $this->smarty->assign('vista','Grados');
             $this->smarty->assign('title','Director');
             $this->smarty->display('Default.tpl');

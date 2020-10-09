@@ -64,7 +64,7 @@
                 
                 <div class="form-group col-md-6 py-3 ">
                   <label for="inputPassword5">
-                    CUI
+                    DPI
                   </label>
                   <input type="text" name="cui" class="form-control" id="Apellido_1" required>
                 </div>
@@ -97,14 +97,6 @@
                   <input type="email" name="email" class="form-control" id="email">
                 </div>
                 
-                <!--
-                <div class="form-group col-md-6 py-3">
-                  <label for="pwd">
-                    Contraseña
-                  </label>
-                  <input type="password" class="form-control" id="pwd">
-                </div>
-                -->
 
                 <div class="col-md-6 mb-6">
                   <label for="validationCustom02">
@@ -134,24 +126,7 @@
                 
               </div>
               
-              <!--
-              <div class="form-group col-md-6 py-3">
-                <label for="exampleFormControlSelect1">
-                  Puesto:
-                </label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>
-                    1
-                  </option>
-                  <option>
-                    2
-                  </option>
-                  <option>
-                    3
-                  </option>
-                </select>
-              </div>
-              -->
+              
               
               <div class="form-row py-5">
                 <div class="form-group col-md-6 ">
@@ -164,6 +139,19 @@
                     {/foreach}
                   </select>
                 </div>
+
+                <div class="form-group col-md-6 ">
+                  <label for="exampleFormControlSelect1">
+                    Sección:
+                  </label>
+                  <select class="form-control" name="seccion" id="exampleFormControlSelect1">
+                    {foreach from=$seccion item=$s }
+                        <option value="{$s}">{$s}</option>
+                    {/foreach}
+                  </select>
+                </div>
+
+
                 <div class="form-group col-md-6 ">
                   <label for="exampleFormControlSelect1">
                     Grado:
@@ -252,44 +240,19 @@
               <!-- Button trigger modal -->
               
               <input type="submit" value="GUARDAR" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"/>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-3" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
-                        Confirmación
-                      </h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">
-                          &times;
-                        </span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      ¿Desea guardar?
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Cerrar
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Sí, guardar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
-    </form>
-    
-    
+    </form> 
     </div>
+    {if isset($alm)}
+      <div class="alert alert-primary" style="max-width: 20rem;"  role="alert">
+      El carnet del estudiante es: <strong>{$alm}</strong>
+      </div>
+    {/if}
   </section>
 </center>
 </div>

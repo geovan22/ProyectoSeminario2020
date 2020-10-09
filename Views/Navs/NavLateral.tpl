@@ -91,43 +91,19 @@
                   </i>
                       Maestros / Alumnos</a>
               </li>
-            
-            </ul>
-          </li>
-          <ul class="collapse lisst-unstyled" id="submenu3">     
+     
             <li>
                 <a href="?controller=Director&action=DireccionVistas&Vista=ConsultaMalla" class="nav-link"><i class="material-icons">
                 </i>
                     Malla Curricular</a>
             </li>
-          
+            <li>
+                <a href="?controller=Director&action=DireccionVistas&Vista=ConsultaNivel" class="nav-link"><i class="material-icons">
+                </i>
+                    Niveles</a>
+            </li>
           </ul>
         </li>
-          
-                <li class="nav-item ">
-                  <a class="nav-link" href="#">
-                    <i class="material-icons">location_ons</i>
-                    <p>------</p>
-                  </a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="#">
-                    <i class="material-icons">notifications</i>
-                    <p>------</p>
-                  </a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="#">
-                    <i class="material-icons">language</i>
-                    <p>-------</p>
-                  </a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="#">
-                    <i class="material-icons">language</i>
-                    <p>-------</p>
-                  </a>
-                </li>
               </ul>
             </div>
            </div>

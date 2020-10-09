@@ -1,11 +1,12 @@
 <?php
-	Class Educativo
+	Class Educativo                   
     {
         public $medoo;
         public $conexion;
         
         public function __construct()
         {
+          
             $this->conexion=new Conexion();
             $this->medoo=$this->conexion->ConexionDB();    
         }
@@ -43,15 +44,18 @@
             );
           }
          
-         public function CrearMalla($carrera,$grado,$nivle,$curso)
+         public function CrearMalla($carrera,$grado,$nivle,$curso,$seccion,$ciclo)
          {
             return $this->medoo->insert("Pro_Malla",[
                     "Pro_Carrera_id_Pro_Carrera"=>$carrera,
                     "Pro_grado_id_Pro_grado"=>$grado,
                     "Pro_Nivel_id_Pro_Nivel"=>$nivle,
-                    "Curso"=>$curso
+                    "Curso"=>$curso,
+                    "Pro_Seccion_id_Pro_Seccion"=>$seccion,
+                    "Pro_Ciclo_id_Pro_Ciclo"=>$ciclo
+                    
                 ]
-            );
+            );    
          }
         public function CrearPuesto($id)
         {
@@ -81,6 +85,25 @@
             ]);
         }
          
+        public function CrearCiclo($ciclo) 
+        {
+              return $this->medoo->insert(
+                    "Pro_Ciclo",
+                    [
+                         "Ciclo"=>$ciclo
+                    ]
+              );
+        }
+        
+        public function CrearSeccion($seccion) 
+        {
+              return $this->medoo->insert(
+                    "Pro_Seccion",
+                    [
+                         "Seccion"=>$seccion
+                    ]
+              );
+        }  
          
          /**
           * Buscar
@@ -95,6 +118,8 @@
             );
             
         }
+        
+        
             
         public function BuscarPuesto2($puesto)
         {
@@ -167,13 +192,26 @@
             );
          }
          
-         public function BuscarMalla($nivel, $grado, $carrera)
+         public function BuscarSeccion($seccion)
+         {
+            return $this->medoo->select("Pro_Seccion",
+                "*",
+                [
+                    "Seccion"=>$seccion
+                ]
+            );
+         }
+         
+         
+         
+         public function BuscarMalla($nivel, $grado, $carrera,$seccion)
          {
             return $this->medoo->select("Pro_Malla","*",
                 [
                     "Pro_Carrera_id_Pro_Carrera"=>$carrera,
                     "Pro_grado_id_Pro_grado"=>$grado,
-                    "Pro_Nivel_id_Pro_Nivel"=>$nivel
+                    "Pro_Nivel_id_Pro_Nivel"=>$nivel,
+                    "Pro_Seccion_id_Pro_Seccion" =>$seccion
                 ]
             );
          }
@@ -204,7 +242,8 @@
          public function VerCarrera()
          {
             return $this->medoo->select("Pro_Carrera",
-                "Carrera"
+                
+                    "Carrera"
             );
          }
          
@@ -222,6 +261,12 @@
             );
          }
          
+         public function VerSeccion()
+         {
+            return $this->medoo->select("Pro_Seccion",
+                "Seccion"
+            );
+         }
          /**
          * Eliminar
          */ 

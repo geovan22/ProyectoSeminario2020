@@ -27,22 +27,35 @@
                 <div class="form-row">
                   <div class="form-group col-md-6 py-3 ">
                     <label for="validationCustom01">
-                      Nivel
+                      Nivel:
                     </label>
                     <input type="text" name="nivel" class="form-control " id="Nombre_1" required>
                   </div>
                   <div class="form-group col-md-6 py-3 ">
                     <label for="validationCustom02">
-                      Grado
+                      Grado:
                     </label>
                     <input type="text" name="grado" class="form-control" id="Nombre_2">
                   </div>
                   <div class="form-group col-md-6 py-3 ">
                     <label for="validationCustom03">
-                      Carrera
+                      Carrera:
                     </label>
                     <input type="text" name="carrera" class="form-control" id="Nombre_3">
                   </div>
+                  <div class="form-group col-md-6 py-3 ">
+                    <label for="validationCustom03">
+                      Ciclo:
+                    </label>
+                    <input type="text" name="ciclo" class="form-control" id="Nombre_3">
+                  </div>
+                  
+                  <div class="form-group col-md-6 py-0 ">
+                  <label for="validationCustom03">
+                    Seccion:
+                  </label>
+                  <input type="text" name="seccion" class="form-control" id="Nombre_3">
+                </div>
                 </div>
             </div>
           </div>
@@ -53,33 +66,7 @@
               
               <input type="submit" value="GUARDAR" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"/>
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
-                        Confirmación
-                      </h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">
-                          &times;
-                        </span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      ¿Desea guardar?
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Cerrar
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Sí, guardar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+           
             </div>
           </div>
         </div>
