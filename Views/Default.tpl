@@ -1,6 +1,6 @@
 {include file='Cabeceras/Header.tpl'}
     {if $title=='Colegio'}
-        {include file='index.tpl'}
+        {include file="index.tpl"}
     {else if $title=='Director'}
         {include file='Director.tpl'}
     {else if $title=='Maestro'}
