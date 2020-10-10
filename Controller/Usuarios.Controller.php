@@ -13,7 +13,7 @@
             //$this->caching = true;
             //$this->compile_check = true;
             $this->usuario=new Usuario();
-            $this->smarty->template_dir('./Views');
+            
             
             $this->educativo=new Educativo();
             
